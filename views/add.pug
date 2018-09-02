@@ -1,0 +1,17 @@
+html
+  head
+    script(src='/static/jquery.js')
+    script(src='/static/add.js')
+    title= title
+
+  body
+    h1 Add Numbers
+    form(onsubmit="submitAdd(); return false;" method="POST" action="/add")
+       label(for='a') A:
+       input#a.form-control(type='text')
+       label(for='b') B:
+       input#b.form-control(type='text')
+       button.btn.btn-primary(type='submit') Add Numbers
+    div
+       span Result:
+       span#result 
